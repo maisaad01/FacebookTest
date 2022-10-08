@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CreateNewAccount">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <EditText
+        android:id="@+id/user_name_new_account"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawablePadding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        android:hint="@string/user_name_new_account"
+        />
+    <EditText
+        android:id="@+id/password_new_account"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_new_account"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:hint="@string/password"
+        />
+    <com.google.android.gms.common.internal.SignInButtonImpl
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:background="#33BFB1"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:padding="@dimen/_15sdp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/password_new_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
