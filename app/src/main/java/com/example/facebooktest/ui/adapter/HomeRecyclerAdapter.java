@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +20,7 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
 
     public HomeRecyclerAdapter(List<PostModel> posts) {
         this.posts = posts;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -48,7 +50,7 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
     }
 
     static class postHolder extends RecyclerView.ViewHolder{
-        EditText userNameProPost , postTime , postText ;
+        TextView userNameProPost , postTime , postText ;
         ImageView userProImgPost , postImg ;
 
         public postHolder(@NonNull View itemView) {

@@ -33,7 +33,7 @@ public class CreateNewAccount extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signWithEmailAndPassword (Email,Password);
+                signWithEmailAndPassword (Email.getText().toString(),Password.getText().toString());
             }
         });
     }
@@ -51,8 +51,8 @@ public class CreateNewAccount extends AppCompatActivity {
             Toast.makeText(this, "Have Account", Toast.LENGTH_SHORT).show();
     }
 
-    private void signWithEmailAndPassword ( EditText Email , EditText Password) {
-        auth.createUserWithEmailAndPassword(String.valueOf(Email), String.valueOf(Password))
+    private void signWithEmailAndPassword ( String  Email , String  Password) {
+        auth.createUserWithEmailAndPassword(Email, Password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

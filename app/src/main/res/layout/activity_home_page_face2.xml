@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#222222"
     tools:context=".ui.activity.HomePageFace2">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout_facebook2"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:tabSelectedTextColor="@color/black"
@@ -52,15 +52,17 @@
             android:icon="@drawable/ic_baseline_menu_24" />
 
     </com.google.android.material.tabs.TabLayout>
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager_facebook2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#222222"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:background="#bebe"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout_facebook2"
         >
 
-    </androidx.viewpager.widget.ViewPager>
+    </androidx.viewpager2.widget.ViewPager2>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
