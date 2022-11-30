@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.HomePageFace">
+    tools:context=".ui.home.HomePageFaceActivity">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout_facebook"

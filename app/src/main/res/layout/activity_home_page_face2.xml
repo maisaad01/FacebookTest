@@ -10,43 +10,48 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout_facebook2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_55sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:tabSelectedTextColor="@color/black"
+        app:tabSelectedTextColor="#0124A3"
         android:backgroundTint="#222222"
         app:tabIconTint="@color/black"
-        android:outlineAmbientShadowColor="@color/white"
-        app:tabIndicatorColor="@color/black"
-        app:tabIndicatorHeight="@dimen/_5sdp"
+        app:tabIndicatorColor="#0124A3"
+        app:tabIndicatorHeight="@dimen/_4sdp"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/layoutHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_home_24" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/layoutFriends"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_video_24" />
+            android:icon="@drawable/ic_baseline_friends_alt_24" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/layoutMarketPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_shopping_cart_24" />
+            android:icon="@drawable/ic_baseline_market_place_24" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/layoutMemories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_baseline_feedback_24" />
+            android:icon="@drawable/ic_baseline_memories_24" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/layoutNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_notifications_24" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/layoutMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_menu_24" />
@@ -57,8 +62,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
-        android:background="#bebe"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout_facebook2"
         >
 

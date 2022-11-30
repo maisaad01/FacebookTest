@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.facebooktest.R;
@@ -46,11 +45,11 @@ public class LoginFacebook extends AppCompatActivity {
 
     private void check (){
         if (userName.getText().toString().isEmpty()){
-            Toast.makeText(this,getString(R.string.entername),Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.enterName),Toast.LENGTH_LONG).show();
             return;
         }
         if (Password.getText().toString().isEmpty()){
-            Toast.makeText(this,getString(R.string.enterpassword),Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.enterPassword),Toast.LENGTH_LONG).show();
             return;
         }
         if (userName.getText().toString().equals("Mai") && Password.getText().toString().equals("1234")){

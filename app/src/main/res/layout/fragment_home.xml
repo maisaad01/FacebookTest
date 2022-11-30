@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.fragment.Home">
+    tools:context=".ui.home.HomeFragment">
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/Home_Facebook_Recycler"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       tools:listitem="@layout/item_posts_layout">
-
-   </androidx.recyclerview.widget.RecyclerView>
+       tools:listitem="@layout/item_posts_layout" />
 
 </FrameLayout>

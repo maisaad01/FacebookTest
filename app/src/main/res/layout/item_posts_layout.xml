@@ -23,7 +23,7 @@
             android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/user_name"
+            android:text="@string/user_name1"
             android:textColor="@color/white"
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
@@ -34,46 +34,48 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.072"/>
 
-        <TextView
-            android:id="@+id/post_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Post_time"
-            android:textColor="#87878787"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.071"
-            app:layout_constraintStart_toEndOf="@+id/profile_img"
-            app:layout_constraintTop_toBottomOf="@+id/profile_name"
-            app:layout_constraintVertical_bias="0.0"/>
+    <TextView
+        android:id="@+id/post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Post_time"
+        android:textColor="#87878787"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/post_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/Text_Post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:text="@string/Text_Post"
         android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"
         android:textStyle="italic"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_10ssp"
         app:layout_constraintBottom_toTopOf="@+id/post_img"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/post_time" />
+        app:layout_constraintTop_toBottomOf="@+id/post_time"
+        app:layout_constraintVertical_bias="0.28" />
 
     <ImageView
         android:id="@+id/post_img"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/like_comment_share"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_Post"
         app:layout_constraintVertical_bias="0.32"
         tools:src="@color/black" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/Exit"
         android:layout_width="wrap_content"
@@ -81,6 +83,8 @@
         app:icon="@drawable/ic_baseline_clear_24"
         app:iconTint="@color/white"
         app:iconGravity="end"
+        android:layout_marginTop="@dimen/_10sdp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,16 +95,19 @@
         app:icon="@drawable/ic_baseline_menu_post_24"
         app:iconTint="@color/white"
         app:iconGravity="end"
+        android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toStartOf="@id/Exit"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/like_comment_share"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
         android:weightSum="3"
-        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/post_img">
 
         <com.google.android.material.button.MaterialButton
@@ -110,7 +117,7 @@
             android:text="@string/like"
             android:textColor="@color/white"
             app:icon="@drawable/ic_baseline_like_up_24"
-            app:iconTint="@color/white"/>
+            app:iconTint="@color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
@@ -119,7 +126,7 @@
             android:text="@string/comment"
             android:textColor="@color/white"
             app:icon="@drawable/ic_baseline_comment_24"
-            app:iconTint="@color/white"/>
+            app:iconTint="@color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
@@ -128,7 +135,7 @@
             android:text="@string/share"
             android:textColor="@color/white"
             app:icon="@drawable/ic_baseline_share_24"
-            app:iconTint="@color/white"/>
+            app:iconTint="@color/white" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

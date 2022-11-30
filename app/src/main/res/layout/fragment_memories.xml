@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#222222"
+    tools:context=".ui.fragment.MemoriesFragment">
+
+    <TextView
+        android:id="@+id/memories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/memories"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:padding="@dimen/_6sdp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_baseline_settings_24"
+        app:iconTint="@color/white"
+        app:iconGravity="end"
+        app:iconSize="@dimen/_25sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/memoryImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/memories"
+        android:src="@drawable/memories"/>
+    <TextView
+        android:id="@+id/memoryTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/memoryImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/memory"
+        android:textSize="@dimen/_16sdp"
+        android:padding="@dimen/_10sdp"
+        android:textColor="#B6B5B5"/>
+
+    <View
+        android:id="@+id/lineMemory"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintTop_toBottomOf="@id/memoryTxt"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@color/black"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editMemory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_baseline_border_color_24"
+        app:iconTint="@color/white"
+        app:iconGravity="start"
+        app:iconSize="@dimen/_25sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lineMemory"
+        android:layout_marginTop="@dimen/_15sdp"/>
+    <TextView
+        android:id="@+id/create_new_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editMemory"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/create_new_post"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginStart="8dp" />
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/create_new_post"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="#bebebe"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/memory_profile_img"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        tools:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line"
+        app:layout_constraintVertical_bias="0.066"/>
+
+    <TextView
+        android:id="@+id/memory_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/what"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintStart_toEndOf="@+id/memory_profile_img"
+        app:layout_constraintTop_toTopOf="@id/line"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/check_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/memory_profile_img">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/check_in"
+            android:textColor="@color/white"
+            app:iconGravity="textStart"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            app:iconTint="#FB0404"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/photo"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_baseline_photo_library_24"
+            app:iconGravity="textStart"
+            app:iconTint="#0EE317"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
